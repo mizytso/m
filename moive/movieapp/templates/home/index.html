@@ -1,0 +1,265 @@
+{% extends "home/movie_home.html" %}
+{% block content %}
+<!--热门电影-->
+<section id="hotmovie" style="margin-top:76px">
+    <!--<div class="container">-->
+        <!--<div class="row wow fadeInRight" data-wow-delay="0.6s">-->
+            <!--<div class="row">-->
+                <!--<iframe class="wow fadeIn" width="100%" height="375px" frameborder=0 scrolling=no src="{{url_for('home.animation')}}"></iframe>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+</section>
+<!--热门电影-->
+<!--电影列表-->
+<section id="movielist">
+    <div class="container">
+        <div class="row wow fadeIn" data-wow-delay="0.6s">
+            <div class="col-md-12 table-responsive">
+                <table class="table text-left table-bordered" id="movietags">
+                    <tr>
+                        <td style="width:10%;">movie labels</td>
+                        <td style="width:90%;">
+                            <a class="label label-info"><span class="glyphicon glyphicon-tag" ></span>&nbsp;label A</a>
+                            &nbsp;
+                            <a class="label label-info"><span class="glyphicon glyphicon-tag"></span>&nbsp;label B</a>
+                            &nbsp;
+                            <a class="label label-info"><span class="glyphicon glyphicon-tag"></span>&nbsp;label C</a>
+                            &nbsp;
+                    </tr>
+                    <tr>
+                        <td>movie stars</td>
+                        <td>
+                            <a class="label label-warning"><span class="glyphicon glyphicon-star"></span>&nbsp;one star</a>
+                            &nbsp;
+                            <a class="label label-warning"><span class="glyphicon glyphicon-star"></span>&nbsp;two stars</a>
+                            &nbsp;
+                            <a class="label label-warning"><span class="glyphicon glyphicon-star"></span>&nbsp;three stars</a>
+                            &nbsp;
+                            <a class="label label-warning"><span class="glyphicon glyphicon-star"></span>&nbsp;four stars</a>
+                            &nbsp;
+                            <a class="label label-warning"><span class="glyphicon glyphicon-star"></span>&nbsp;five stars</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>release time</td>
+                        <td>
+                            <a class="label label-default"><span class="glyphicon glyphicon-time"></span>&nbsp;recent</span></a>
+                            &nbsp;
+                            <a class="label label-default"><span class="glyphicon glyphicon-time"></span>&nbsp;2017</span></a>
+                            &nbsp;
+                            <a class="label label-default"><span class="glyphicon glyphicon-time"></span>&nbsp;2016</span></a>
+                            &nbsp;
+                            <a class="label label-default"><span class="glyphicon glyphicon-time"></span>&nbsp;2015</span></a>
+                            &nbsp;
+                            <a class="label label-default"><span class="glyphicon glyphicon-time"></span>&nbsp;more early</span></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>play counts</td>
+                        <td>
+                            <a class="label label-success"><span class="glyphicon glyphicon-arrow-down"></span>&nbsp;high to low</span></a>
+                            &nbsp;
+                            <a class="label label-danger"><span class="glyphicon glyphicon-arrow-up"></span>&nbsp;low to high</span></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>comment counts</td>
+                        <td>
+                            <a class="label label-success"><span class="glyphicon glyphicon-arrow-down"></span>&nbsp;high to low</span></a>
+                            &nbsp;
+                            <a class="label label-danger"><span class="glyphicon glyphicon-arrow-up"></span>&nbsp;low to high</span></a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <!--<div class="col-md-12 table-responsive">-->
+                <!--<table class="table text-left table-bordered" id="movietags">-->
+                    <!--<tr>-->
+                        <!--<td style="width:10%;">movie labels</td>-->
+                        <!--<td style="width:90%;">-->
+                            <!--<a class="label label-info"><span class="glyphicon glyphicon-tag" ></span>&nbsp;label A</a>-->
+                            <!--&nbsp;-->
+                            <!--<a class="label label-info"><span class="glyphicon glyphicon-tag"></span>&nbsp;label B</a>-->
+                            <!--&nbsp;-->
+                            <!--<a class="label label-info"><span class="glyphicon glyphicon-tag"></span>&nbsp;label C</a>-->
+                            <!--&nbsp;-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                        <!--<td>movie stars</td>-->
+                        <!--<td>-->
+                            <!--<a class="label label-warning"><span class="glyphicon glyphicon-star"></span>&nbsp;one star</a>-->
+                            <!--&nbsp;-->
+                            <!--<a class="label label-warning"><span class="glyphicon glyphicon-star"></span>&nbsp;two stars</a>-->
+                            <!--&nbsp;-->
+                            <!--<a class="label label-warning"><span class="glyphicon glyphicon-star"></span>&nbsp;three stars</a>-->
+                            <!--&nbsp;-->
+                            <!--<a class="label label-warning"><span class="glyphicon glyphicon-star"></span>&nbsp;four stars</a>-->
+                            <!--&nbsp;-->
+                            <!--<a class="label label-warning"><span class="glyphicon glyphicon-star"></span>&nbsp;five stars</a>-->
+                        <!--</td>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                        <!--<td>release time</td>-->
+                        <!--<td>-->
+                            <!--<a class="label label-default"><span class="glyphicon glyphicon-time"></span>&nbsp;recent</span></a>-->
+                            <!--&nbsp;-->
+                            <!--<a class="label label-default"><span class="glyphicon glyphicon-time"></span>&nbsp;2017</span></a>-->
+                            <!--&nbsp;-->
+                            <!--<a class="label label-default"><span class="glyphicon glyphicon-time"></span>&nbsp;2016</span></a>-->
+                            <!--&nbsp;-->
+                            <!--<a class="label label-default"><span class="glyphicon glyphicon-time"></span>&nbsp;2015</span></a>-->
+                            <!--&nbsp;-->
+                            <!--<a class="label label-default"><span class="glyphicon glyphicon-time"></span>&nbsp;more early</span></a>-->
+                        <!--</td>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                        <!--<td>play counts</td>-->
+                        <!--<td>-->
+                            <!--<a class="label label-success"><span class="glyphicon glyphicon-arrow-down"></span>&nbsp;high to low</span></a>-->
+                            <!--&nbsp;-->
+                            <!--<a class="label label-danger"><span class="glyphicon glyphicon-arrow-up"></span>&nbsp;low to high</span></a>-->
+                        <!--</td>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                        <!--<td>comment counts</td>-->
+                        <!--<td>-->
+                            <!--<a class="label label-success"><span class="glyphicon glyphicon-arrow-down"></span>&nbsp;high to low</span></a>-->
+                            <!--&nbsp;-->
+                            <!--<a class="label label-danger"><span class="glyphicon glyphicon-arrow-up"></span>&nbsp;low to high</span></a>-->
+                        <!--</td>-->
+                    <!--</tr>-->
+                <!--</table>-->
+            <!--</div>-->
+            <!--{% for v in range(1) %}-->
+            <!--<div class="col-md-3">-->
+                <!--<div class="movielist text-center">-->
+                    <!--&lt;!&ndash;<img data-original="holder.js/262x166"-->
+                             <!--class="img-responsive lazy center-block" alt="">&ndash;&gt;-->
+                    <!--<img src="{{url_for('static', filename='animation/main_banner/big0720150102210934.jpg')}}" class="img-responsive center-block" alt="">-->
+                    <!--<div class="text-left" style="margin-left:auto;margin-right:auto;width:210px;">-->
+                        <!--<span style="color:#999;font-style: italic;">Blade Runner</span><br>-->
+                        <!--<div>-->
+                            <!--<span class="glyphicon glyphicon-star" style="color:#FFD119"></span>-->
+                            <!--<span class="glyphicon glyphicon-star" style="color:#FFD119"></span>-->
+                            <!--<span class="glyphicon glyphicon-star" style="color:#FFD119"></span>-->
+                            <!--<span class="glyphicon glyphicon-star-empty" style="color:#FFD119"></span>-->
+                            <!--<span class="glyphicon glyphicon-star-empty" style="color:#FFD119"></span>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<a href="{{url_for('home.movie_play')}}" class="btn btn-primary" target="_blank" role="button"><span class="glyphicon glyphicon-play"></span>&nbsp;play</a>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--{% endfor %}-->
+            {% for v in range(1) %}
+            <div class="col-md-3">
+                <div class="movielist text-center">
+                    <!--<img data-original="holder.js/262x166"
+                             class="img-responsive lazy center-block" alt="">-->
+                    <img src="{{url_for('static', filename='animation/main_banner/big0420150101224343.jpg')}}" class="img-responsive center-block" alt="">
+                    <div class="text-left" style="margin-left:auto;margin-right:auto;width:210px;">
+                        <span style="color:#999;font-style: italic;">Blade Runner</span><br>
+                        <div>
+                            <span class="glyphicon glyphicon-star" style="color:#FFD119"></span>
+                            <span class="glyphicon glyphicon-star" style="color:#FFD119"></span>
+                            <span class="glyphicon glyphicon-star" style="color:#FFD119"></span>
+                            <span class="glyphicon glyphicon-star-empty" style="color:#FFD119"></span>
+                            <span class="glyphicon glyphicon-star-empty" style="color:#FFD119"></span>
+                        </div>
+                    </div>
+                    <a href="{{url_for('home.movie_play')}}" class="btn btn-primary" target="_blank" role="button"><span class="glyphicon glyphicon-play"></span>&nbsp;play</a>
+                </div>
+            </div>
+            {% endfor %}
+            {% for v in range(1) %}
+            <div class="col-md-3">
+                <div class="movielist text-center">
+                    <!--<img data-original="holder.js/262x166"
+                             class="img-responsive lazy center-block" alt="">-->
+                    <img src="{{url_for('static', filename='animation/main_banner/big0320150101183351.jpg')}}" class="img-responsive center-block" alt="">
+                    <div class="text-left" style="margin-left:auto;margin-right:auto;width:210px;">
+                        <span style="color:#999;font-style: italic;">Blade Runner</span><br>
+                        <div>
+                            <span class="glyphicon glyphicon-star" style="color:#FFD119"></span>
+                            <span class="glyphicon glyphicon-star" style="color:#FFD119"></span>
+                            <span class="glyphicon glyphicon-star" style="color:#FFD119"></span>
+                            <span class="glyphicon glyphicon-star-empty" style="color:#FFD119"></span>
+                            <span class="glyphicon glyphicon-star-empty" style="color:#FFD119"></span>
+                        </div>
+                    </div>
+                    <a href="{{url_for('home.movie_play')}}" class="btn btn-primary" target="_blank" role="button"><span class="glyphicon glyphicon-play"></span>&nbsp;play</a>
+                </div>
+            </div>
+            {% endfor %}
+            {% for v in range(１) %}
+            <div class="col-md-3">
+                <div class="movielist text-center">
+                    <!--<img data-original="holder.js/262x166"
+                             class="img-responsive lazy center-block" alt="">-->
+                    <img src="{{url_for('static', filename='animation/main_banner/big0120150101183428.jpg')}}" class="img-responsive center-block" alt="">
+                    <div class="text-left" style="margin-left:auto;margin-right:auto;width:210px;">
+                        <span style="color:#999;font-style: italic;">Blade Runner</span><br>
+                        <div>
+                            <span class="glyphicon glyphicon-star" style="color:#FFD119"></span>
+                            <span class="glyphicon glyphicon-star" style="color:#FFD119"></span>
+                            <span class="glyphicon glyphicon-star" style="color:#FFD119"></span>
+                            <span class="glyphicon glyphicon-star-empty" style="color:#FFD119"></span>
+                            <span class="glyphicon glyphicon-star-empty" style="color:#FFD119"></span>
+                        </div>
+                    </div>
+                    <a href="{{url_for('home.movie_play')}}" class="btn btn-primary" target="_blank" role="button"><span class="glyphicon glyphicon-play"></span>&nbsp;play</a>
+                </div>
+            </div>
+            {% endfor %}
+            {% for v in range(1) %}
+            <div class="col-md-3">
+                <div class="movielist text-center">
+                    <!--<img data-original="holder.js/262x166"
+                             class="img-responsive lazy center-block" alt="">-->
+                    <img src="{{url_for('static', filename='animation/main_banner/big0020150102211033.jpg')}}" class="img-responsive center-block" alt="">
+                    <div class="text-left" style="margin-left:auto;margin-right:auto;width:210px;">
+                        <span style="color:#999;font-style: italic;">Blade Runner</span><br>
+                        <div>
+                            <span class="glyphicon glyphicon-star" style="color:#FFD119"></span>
+                            <span class="glyphicon glyphicon-star" style="color:#FFD119"></span>
+                            <span class="glyphicon glyphicon-star" style="color:#FFD119"></span>
+                            <span class="glyphicon glyphicon-star-empty" style="color:#FFD119"></span>
+                            <span class="glyphicon glyphicon-star-empty" style="color:#FFD119"></span>
+                        </div>
+                    </div>
+                    <a href="{{url_for('home.movie_play')}}" class="btn btn-primary" target="_blank" role="button"><span class="glyphicon glyphicon-play"></span>&nbsp;play</a>
+                </div>
+            </div>
+            {% endfor %}
+            <div class="col-md-12">
+                <nav aria-label="Page navigation">
+                    <ul class="pagination">
+                        <li>
+                            <a href="#" aria-label="First">
+                                <span aria-hidden="true">first page</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" aria-label="Previous">
+                                <span aria-hidden="true">previous</span>
+                            </a>
+                        </li>
+                        <li><a href="#">1&nbsp;/&nbsp;1</a></li>
+                        <li>
+                            <a href="#" aria-label="Next">
+                                <span aria-hidden="true">next</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" aria-label="Last">
+                                <span aria-hidden="true">last page</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</section>
+<!--电影列表-->
+{% endblock %}

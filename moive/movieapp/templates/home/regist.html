@@ -1,0 +1,50 @@
+{% extends "home/home.html" %}
+{% block content %}
+<div class="row">
+    <div class="col-md-4 col-md-offset-4">
+        <div class="panel panel-success">
+            <div class="panel-heading">
+                <h3 class="panel-title"><span class="glyphicon glyphicon-plus"></span>&nbsp;member register</h3>
+            </div>
+            <div class="panel-body">
+                <form role="form">
+                    <fieldset>
+                        <div class="form-group">
+                            <label for="input_name"><span class="glyphicon glyphicon-user"></span>&nbsp;nickname</label>
+                            <input id="input_name" class="form-control input-lg" placeholder="nickname" name="name"
+                                   type="text" autofocus>
+                        </div>
+                        <div class="col-md-12" id="error_name"></div>
+                        <div class="form-group">
+                            <label for="input_email"><span class="glyphicon glyphicon-envelope"></span>&nbsp;mail</label>
+                            <input id="input_email" class="form-control input-lg" placeholder="mail" name="email"
+                                   type="email" autofocus>
+                        </div>
+                        <div class="col-md-12" id="error_email"></div>
+                        <div class="form-group">
+                            <label for="input_phone"><span class="glyphicon glyphicon-phone"></span>&nbsp;phone</label>
+                            <input id="input_phone" class="form-control input-lg" placeholder="phone" name="phone"
+                                   type="text" autofocus>
+                        </div>
+                        <div class="col-md-12" id="error_phone"></div>
+                        <div class="form-group">
+                            <label for="input_password"><span class="glyphicon glyphicon-lock"></span>&nbsp;pwd</label>
+                            <input id="input_password" class="form-control input-lg" placeholder="pwd" name="password"
+                                   type="password" value="">
+                        </div>
+                        <div class="col-md-12" id="error_password"></div>
+                        <div class="form-group">
+                            <label for="input_repassword"><span
+                                    class="glyphicon glyphicon-lock"></span>&nbsp;confirm pwd</label>
+                            <input id="input_repassword" class="form-control input-lg" placeholder="confirm pwd"
+                                   name="repassword" type="password" value="">
+                        </div>
+                        <div class="col-md-12" id="error_repassword"></div>
+                        <a href="{{url_for('home.user')}}" class="btn btn-lg btn-success btn-block">register</a>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
